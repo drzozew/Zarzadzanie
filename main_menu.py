@@ -34,9 +34,9 @@ class Main_Menu(Menu):
 
     def __init__(self):
         self.menu_title = "Główe Menu\n"
-        self.menu_options = ['\n1. Czas nauki Python',
-                             '2. Czas nauki Niemiecki',
-                             '3. Historia słodkich napojów',
+        self.menu_options = ['1. Czas nauki Python',
+                             '2. Czas nauki Niemiecki - TODO',
+                             '3. Historia słodkich napojów - TODO',
                              '4. Zamknij program\n']
         self.error_msg = "Wybór musi być liczbą od 1 do 4"
         self.msg = "Wprowadź liczbę od 1 do 4 aby przejść dalej: "
@@ -67,10 +67,10 @@ class Python_time_menu(Menu):
     def __init__(self):
         self.menu_title = "Python Czas\n"
         self.menu_options = ["1. Dodaj czas i datę nauki Pythona",
-                             "2. Edytuj czas i datę nauki Pythona",
+                             "2. Edytuj czas i datę nauki Pythona - TODO",
                              "3. Wyświetl dane",
-                             "4. Kasa za czas nauki",
-                             "5. Wyświetl podsumowanie danych",
+                             "4. Kasa za czas nauki - TODO",
+                             "5. Wyświetl podsumowanie danych - TODO",
                              "6. Wróć do głównego menu",
                              "7. Zamknij program\n"]
         self.error_msg = "Wybór musi być liczbą od 1 do 7"
@@ -87,13 +87,14 @@ class Python_time_menu(Menu):
             x = Python_time_menu_choice_1()
             x.choices()
         elif choice == 2:
-            print("dwa")
+            print('do zrobienia')
         elif choice == 3:
-            print("trzy")
+            x = Python_time_menu_choice_3()
+            x.choices()
         elif choice == 4:
-            print("trzy")
+            print('do zrobienia')
         elif choice == 5:
-            print("trzy")
+            print('do zrobienia')
         elif choice == 6:
             x = Main_Menu()
             x.choices()
@@ -167,5 +168,47 @@ class Python_time_menu_choice_1(Menu):
             self.choices()
 
 
+class Python_time_menu_choice_3(Menu):
+
+    def __init__(self):
+        self.menu_title = "Wyświetlanie danych dotyczacych czasu nauki Python\n"
+        self.menu_options = ['\n1. Wyświetl dane wg daty',
+                             '2. Wyświetl łączny czas - TODO',
+                             '3. Wyświetl wykres czasu - TODO',
+                             '4. Wróć do poprzedniego menu',
+                             '5. Zamknij program\n']
+        self.error_msg = "Wybór musi być liczbą od 1 do 5"
+        self.msg = "Wprowadź liczbę od 1 do 5 aby przejść dalej: "
+
+    def run_menu(self):
+        choice = self.menu_view(
+            self.menu_options, self.error_msg, self.msg, True, self.menu_title)
+        return(choice)
+
+    def choices(self):
+        choice = self.run_menu()
+        if choice == 1:
+            x = PTC()
+            x.choice_3_1()
+            y = Python_time_menu_choice_3()
+            y.choices()
+        elif choice == 2:
+            print('do zrobienia')
+        elif choice == 3:
+            print('do zrobienia')
+        elif choice == 4:
+            x = Python_time_menu()
+            x.choices()
+        elif choice == 5:
+            exit()
+        else:
+            print('cos poszło nie tak z Main_Menu')
+            self.choices()
+
+
 main_program = Main_Menu()
 main_program.choices()
+
+
+# przeniesc run_menu do clasy menu
+# rozdzielic na pare plikow menu bo robi sie za gesto
