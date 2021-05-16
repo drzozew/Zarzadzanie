@@ -20,7 +20,8 @@ class Menu():
 
     def clean(self): return os.system('clear')
 
-    def menu_view(self, options, error_msg, message, clear):
+    def menu_view(self, options, error_msg, message, clear, menu_title):
+        print(menu_title)
         for option in options:
             print(option)
         choice = self.is_number(error_msg, message, len(options))
@@ -32,6 +33,7 @@ class Menu():
 class Main_Menu(Menu):
 
     def __init__(self):
+        self.menu_title = "Główe Menu\n"
         self.menu_options = ['\n1. Czas nauki Python',
                              '2. Czas nauki Niemiecki',
                              '3. Historia słodkich napojów',
@@ -41,7 +43,7 @@ class Main_Menu(Menu):
 
     def run_menu(self):
         choice = self.menu_view(
-            self.menu_options, self.error_msg, self.msg, True)
+            self.menu_options, self.error_msg, self.msg, True, self.menu_title)
         return(choice)
 
     def choices(self):
@@ -63,6 +65,7 @@ class Main_Menu(Menu):
 class Python_time_menu(Menu):
 
     def __init__(self):
+        self.menu_title = "Python Czas\n"
         self.menu_options = ["1. Dodaj czas i datę nauki Pythona",
                              "2. Edytuj czas i datę nauki Pythona",
                              "3. Wyświetl dane",
@@ -75,13 +78,12 @@ class Python_time_menu(Menu):
 
     def run_menu(self):
         choice = self.menu_view(
-            self.menu_options, self.error_msg, self.msg, True)
+            self.menu_options, self.error_msg, self.msg, True, self.menu_title)
         return(choice)
 
     def choices(self):
         choice = self.run_menu()
         if choice == 1:
-            print('pretu')
             x = Python_time_menu_choice_1()
             x.choices()
         elif choice == 2:
@@ -102,9 +104,41 @@ class Python_time_menu(Menu):
             self.choices()
 
 
+class Python_time_menu_choice_1_1(Menu):
+
+    def __init__(self):
+        self.menu_title = ""
+        self.menu_options = ['\n1. Dodać kolejne dane',
+                             '2. Wrócić do poprzedniego menu',
+                             '3. Zamknij program\n']
+        self.error_msg = "Wybór musi być liczbą od 1 do 3"
+        self.msg = "Wprowadź liczbę od 1 do 3 aby przejść dalej: "
+
+    def run_menu(self):
+        choice = self.menu_view(
+            self.menu_options, self.error_msg, self.msg, True, self.menu_title)
+        return(choice)
+
+    def choices(self):
+        choice = self.run_menu()
+        if choice == 1:
+            x = PTC()
+            x.choice_1()
+            self.choices()
+        elif choice == 2:
+            x = Python_time_menu()
+            x.choices()
+        elif choice == 3:
+            exit()
+        else:
+            print('cos poszło nie tak z Main_Menu')
+            self.choices()
+
+
 class Python_time_menu_choice_1(Menu):
 
     def __init__(self):
+        self.menu_title = "Dodawanie czasu nauki\n"
         self.menu_options = ['\n1. Dodaj datę i czas',
                              '2. Wróć do poprzedniego menu',
                              '3. Zamknij program\n']
@@ -113,15 +147,16 @@ class Python_time_menu_choice_1(Menu):
 
     def run_menu(self):
         choice = self.menu_view(
-            self.menu_options, self.error_msg, self.msg, True)
+            self.menu_options, self.error_msg, self.msg, True, self.menu_title)
         return(choice)
 
     def choices(self):
         choice = self.run_menu()
         if choice == 1:
-            print('tutaj')
-            x = PTC()
-            x.choice_1()
+            y = PTC()
+            y.choice_1()
+            x = Python_time_menu_choice_1_1()
+            x.choices()
         elif choice == 2:
             x = Python_time_menu()
             x.choices()
