@@ -237,7 +237,7 @@ main_program = Main_Menu()
 main_program.choices()
 
 
-# przeniesc run_menu do clasy menu
+
 # rozdzielic na pare plikow menu bo robi sie za gesto
 # przeniesc eror msg do klasy menu ? i moze jakos msg tez
 # mozna dodac linie celu w wykresie aby bylo wiadomo jak jestem blisko lub daleko celu
