@@ -46,7 +46,7 @@ def time_in_mins_list(time_list):
     time_value = []
     try:
         for time in time_list:
-            time_from_list = time
+            time_from_list = time[1:-1:1]
             hour, minute, second = map(int, time_from_list.split(':'))
             get_time = ((hour*3600)+(minute*60)+second)//60
             time_value.append(get_time)

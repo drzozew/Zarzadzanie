@@ -1,5 +1,5 @@
 from DB_funckje import DB_Python_czas as DB
-from add_data_time import get_data, get_time, add_cash
+from add_data_time import *
 from data_operation import *
 from charts_options import wykres
 
@@ -41,9 +41,11 @@ class Python_time_choises():
 
     def choice_2_3(self):
         DB_fun = self.db
-        time_list = DB_fun.selec_data()
+        data = DB_fun.selec_data()
+        data_list = [line for line in data[0::2]]
+        time_list = [line for line in data[1::2]]
         lista_czasu = time_in_mins_list(time_list)
-        wykres(lista_czasu)
+        wykres(lista_czasu, data_list)
 
     def choice_3_1(self):
         DB_fun = self.db

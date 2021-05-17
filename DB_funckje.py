@@ -118,8 +118,7 @@ class DB_Python_czas():
             for row in records:
                 data = row[0]
                 time = row[1]
-                # dic = {data: time}
-                # data_list.append(dic)
+                data_list.append(data)
                 data_list.append(time)
 
             cursor.close()
@@ -170,3 +169,76 @@ class DB_Python_czas():
                 # print("sqlite connection is closed")
         except sqlite3.Error as e:
             print("W bazie nie ma danych, musisz wpierw coś wprowadzić")
+
+    def selec_data(self, data_filtr_1=0, data_filtr_2=0):
+        data_list = []
+
+        try:
+            sqliteConnection = self.create_DB()
+            cursor = sqliteConnection.cursor()
+
+            sqlite_select_query = """SELECT * from SqliteDb_pythonTime WHERE data >= ? AND data <= ?"""
+            sqlite_select_query_2 = """SELECT * from SqliteDb_pythonTime"""
+
+            if data_filtr_1 == 0 and data_filtr_2 == 0:
+                cursor.execute(sqlite_select_query_2)
+            else:
+                cursor.execute(sqlite_select_query,
+                               (data_filtr_1, data_filtr_2))
+            records = cursor.fetchall()
+            cursor.close()
+
+            for row in records:
+                data = row[0]
+                time = row[1]
+                data_list.append(data)
+                data_list.append(time)
+
+            cursor.close()
+            return data_list
+            # print(f"Dnia {data} było {time} czasu nauki Pythona")
+            # print("data typ", type(data))
+            # print("time typ", type(time))
+
+            if sqliteConnection:
+                sqliteConnection.close()
+                # print("sqlite connection is closed")
+        except sqlite3.Error as e:
+            print("W bazie nie ma danych, musisz wpierw coś wprowadzić")
+
+    def selec_cash(self, data_filtr_1=0, data_filtr_2=0):
+        data_list = []
+
+        try:
+            sqliteConnection = self.create_DB()
+            cursor = sqliteConnection.cursor()
+
+            sqlite_select_query = """SELECT * from SqliteDb_pythonCash WHERE data >= ? AND data <= ?"""
+            sqlite_select_query_2 = """SELECT * from SqliteDb_pythonCash"""
+
+            if data_filtr_1 == 0 and data_filtr_2 == 0:
+                cursor.execute(sqlite_select_query_2)
+            else:
+                cursor.execute(sqlite_select_query,
+                               (data_filtr_1, data_filtr_2))
+            records = cursor.fetchall()
+            cursor.close()
+
+            for row in records:
+                data = row[0]
+                time = row[1]
+                # dic = {data: time}
+                # data_list.append(dic)
+                data_list.append(time)
+
+            cursor.close()
+            return data_list
+            # print(f"Dnia {data} było {time} czasu nauki Pythona")
+            # print("data typ", type(data))
+            # print("time typ", type(time))
+
+            if sqliteConnection:
+                sqliteConnection.close()
+                # print("sqlite connection is closed")
+        except sqlite3.Error as e:
+            print("blad")

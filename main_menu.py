@@ -1,6 +1,5 @@
 import os
 from Python_time_choises import Python_time_choises as PTC
-from main_manu_python_time import *
 
 
 class Menu():
