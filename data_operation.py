@@ -42,16 +42,14 @@ def money_left(cash_out_list, money_for_time):
         return mesage
 
 
-def time_in_seconds_list(time_list):
+def time_in_mins_list(time_list):
     time_value = []
-    print(time_list)
-    try:        
+    try:
         for time in time_list:
             time_from_list = time
             hour, minute, second = map(int, time_from_list.split(':'))
-            get_time = (hour*3600)+(minute*60)+second
+            get_time = ((hour*3600)+(minute*60)+second)//60
             time_value.append(get_time)
-        print(time_value)
         return time_value
     except TypeError:
         mesage = 0

@@ -265,3 +265,9 @@ main_program.choices()
 # rozdzielic na pare plikow menu bo robi sie za gesto
 # przeniesc eror msg do klasy menu ? i moze jakos msg tez
 # mozna dodac linie celu w wykresie aby bylo wiadomo jak jestem blisko lub daleko celu
+# rozbudowac sam wykres
+# w python czas zajac sie 2 pkt czyli edycja, poprawi to moja prace na sqlite
+# w python czas pomslec nad podsumowanie danych, nie wiem czy czasem tego nie usunac1
+# wykres wg dat ?
+# jak ogarne wszystko powzyej biore sie za niemiecki a potem za slodkie napoje
+

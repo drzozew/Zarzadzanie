@@ -42,7 +42,7 @@ class Python_time_choises():
     def choice_3_3(self):
         DB_fun = self.db
         time_list = DB_fun.selec_data()
-        lista_czasu = time_in_seconds_list(time_list)
+        lista_czasu = time_in_mins_list(time_list)
         wykres(lista_czasu)
 
     def choice_4_1(self):
