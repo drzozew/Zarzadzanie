@@ -1,5 +1,6 @@
 import os
 from Python_time_choises import Python_time_choises as PTC
+from main_manu_python_time import *
 
 
 class Menu():
@@ -52,7 +53,7 @@ class Main_Menu(Menu):
             exit()
         else:
             print('cos poszło nie tak z Main_Menu')
-            self.choices()
+            self.choices_()
 
 
 class Python_time_menu(Menu):
@@ -83,28 +84,6 @@ class Python_time_menu(Menu):
             self.choices()
 
 
-class Python_time_menu_choice_1_1(Menu):
-
-    def choices(self):
-        menu_title = ""
-        menu_options = ['\n1. Dodać kolejne dane',
-                        '2. Wrócić do poprzedniego menu',
-                        '3. Zamknij program\n']
-        choice = self.menu_view(menu_options, True, menu_title)
-        x = PTC()
-        y = Python_time_menu()
-        if choice == 1:
-            x.choice_1_1()
-            self.choices()
-        elif choice == 2:
-            y.choices()
-        elif choice == 3:
-            exit()
-        else:
-            print('cos poszło nie tak z Main_Menu')
-            self.choices()
-
-
 class Python_time_menu_choice_1(Menu):
 
     def choices(self):
@@ -121,6 +100,28 @@ class Python_time_menu_choice_1(Menu):
             y.choices()
         elif choice == 2:
             z.choices()
+        elif choice == 3:
+            exit()
+        else:
+            print('cos poszło nie tak z Main_Menu')
+            self.choices()
+
+
+class Python_time_menu_choice_1_1(Menu):
+
+    def choices(self):
+        menu_title = ""
+        menu_options = ['\n1. Dodać kolejne dane',
+                        '2. Wrócić do poprzedniego menu',
+                        '3. Zamknij program\n']
+        choice = self.menu_view(menu_options, True, menu_title)
+        x = PTC()
+        y = Python_time_menu()
+        if choice == 1:
+            x.choice_1_1()
+            self.choices()
+        elif choice == 2:
+            y.choices()
         elif choice == 3:
             exit()
         else:
@@ -188,10 +189,6 @@ class Python_time_menu_choice_3(Menu):
         else:
             print('cos poszło nie tak z Main_Menu')
             self.choices()
-
-
-main_program = Main_Menu()
-main_program.choices()
 
 # rozdzielic na pare plikow menu bo robi sie za gesto
 # mozna dodac linie celu w wykresie aby bylo wiadomo
