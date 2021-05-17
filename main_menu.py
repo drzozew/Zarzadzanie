@@ -41,13 +41,9 @@ class Main_Menu(Menu):
         self.error_msg = "Wybór musi być liczbą od 1 do 4"
         self.msg = "Wprowadź liczbę od 1 do 4 aby przejść dalej: "
 
-    def run_menu(self):
+    def choices(self):
         choice = self.menu_view(
             self.menu_options, self.error_msg, self.msg, True, self.menu_title)
-        return(choice)
-
-    def choices(self):
-        choice = self.run_menu()
         if choice == 1:
             x = Python_time_menu()
             x.choices()
@@ -76,13 +72,9 @@ class Python_time_menu(Menu):
         self.error_msg = "Wybór musi być liczbą od 1 do 7"
         self.msg = "Wprowadź liczbę od 1 do 7 aby przejść dalej: "
 
-    def run_menu(self):
+    def choices(self):
         choice = self.menu_view(
             self.menu_options, self.error_msg, self.msg, True, self.menu_title)
-        return(choice)
-
-    def choices(self):
-        choice = self.run_menu()
         if choice == 1:
             x = Python_time_menu_choice_1()
             x.choices()
@@ -116,13 +108,9 @@ class Python_time_menu_choice_1_1(Menu):
         self.error_msg = "Wybór musi być liczbą od 1 do 3"
         self.msg = "Wprowadź liczbę od 1 do 3 aby przejść dalej: "
 
-    def run_menu(self):
+    def choices(self):
         choice = self.menu_view(
             self.menu_options, self.error_msg, self.msg, True, self.menu_title)
-        return(choice)
-
-    def choices(self):
-        choice = self.run_menu()
         if choice == 1:
             x = PTC()
             x.choice_1()
@@ -147,13 +135,9 @@ class Python_time_menu_choice_1(Menu):
         self.error_msg = "Wybór musi być liczbą od 1 do 3"
         self.msg = "Wprowadź liczbę od 1 do 3 aby przejść dalej: "
 
-    def run_menu(self):
+    def choices(self):
         choice = self.menu_view(
             self.menu_options, self.error_msg, self.msg, True, self.menu_title)
-        return(choice)
-
-    def choices(self):
-        choice = self.run_menu()
         if choice == 1:
             y = PTC()
             y.choice_1()
@@ -181,13 +165,9 @@ class Python_time_menu_choice_3(Menu):
         self.error_msg = "Wybór musi być liczbą od 1 do 5"
         self.msg = "Wprowadź liczbę od 1 do 5 aby przejść dalej: "
 
-    def run_menu(self):
+    def choices(self):
         choice = self.menu_view(
             self.menu_options, self.error_msg, self.msg, True, self.menu_title)
-        return(choice)
-
-    def choices(self):
-        choice = self.run_menu()
         if choice == 1:
             x = PTC()
             x.choice_3_1()
@@ -225,13 +205,9 @@ class Python_time_menu_choice_4(Menu):
         self.error_msg = "Wybór musi być liczbą od 1 do 5"
         self.msg = "Wprowadź liczbę od 1 do 5 aby przejść dalej: "
 
-    def run_menu(self):
+    def choices(self):
         choice = self.menu_view(
             self.menu_options, self.error_msg, self.msg, True, self.menu_title)
-        return(choice)
-
-    def choices(self):
-        choice = self.run_menu()
         if choice == 1:
             x = PTC()
             x.choice_4_1()
@@ -270,4 +246,3 @@ main_program.choices()
 # w python czas pomslec nad podsumowanie danych, nie wiem czy czasem tego nie usunac1
 # wykres wg dat ?
 # jak ogarne wszystko powzyej biore sie za niemiecki a potem za slodkie napoje
-
