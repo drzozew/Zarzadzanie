@@ -14,12 +14,12 @@ class Python_time_choises():
         print("-"*60)
         print("\n"*2)
 
-    def choice_1(self):
+    def choice_1_1(self):
         data_base = self.db
         data_base.create_table()
         data_base.add_data(get_data(), get_time())
 
-    def choice_3_1(self):
+    def choice_2_1(self):
         DB_fun = self.db
         print("Wybierz datę od: ")
         datafiltr_1 = get_data()
@@ -32,20 +32,20 @@ class Python_time_choises():
             f"{datafiltr_2} przeznaczyłeś {time_sum}\n")
         self.seperator()
 
-    def choice_3_2(self):
+    def choice_2_2(self):
         DB_fun = self.db
         time_list = DB_fun.selec_data()
         time_sum = time_paras(time_list)
         print(f"\nŁącznie na nauke Pythona przeznaczyłeś {time_sum}")
         self.seperator()
 
-    def choice_3_3(self):
+    def choice_2_3(self):
         DB_fun = self.db
         time_list = DB_fun.selec_data()
         lista_czasu = time_in_mins_list(time_list)
         wykres(lista_czasu)
 
-    def choice_4_1(self):
+    def choice_3_1(self):
         DB_fun = self.db
         time_list = DB_fun.selec_data()
         money_per_hour = 0.2
@@ -57,7 +57,7 @@ class Python_time_choises():
             print(f"Łącznie za naukę przysługuje {result} zł.")
         self.seperator()
 
-    def choice_4_2(self):
+    def choice_3_2(self):
         DB_fun = self.db
         time_list = DB_fun.selec_data()
         money_per_hour = 0.2
@@ -66,7 +66,7 @@ class Python_time_choises():
         money_left(cash_out_list, time_value)
         self.seperator()
 
-    def choice_4_3(self):
+    def choice_3_3(self):
         DB_fun = self.db
         DB_fun.create_table_cash()
         data = get_data()
