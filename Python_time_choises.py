@@ -25,7 +25,8 @@ class Python_time_choises():
         datafiltr_1 = get_data()
         print("Wybierz datę do: ")
         datafiltr_2 = get_data()
-        time_list = DB_fun.selec_data(datafiltr_1, datafiltr_2)
+        data = DB_fun.selec_data(datafiltr_1, datafiltr_2)
+        time_list = [line for line in data[1::2]]
         time_sum = time_paras(time_list)
         print(
             f"\nNa nauke Python od {datafiltr_1} do "
@@ -34,7 +35,8 @@ class Python_time_choises():
 
     def choice_2_2(self):
         DB_fun = self.db
-        time_list = DB_fun.selec_data()
+        data = DB_fun.selec_data()
+        time_list = [line for line in data[1::2]]
         time_sum = time_paras(time_list)
         print(f"\nŁącznie na nauke Pythona przeznaczyłeś {time_sum}")
         self.seperator()

@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib.legend_handler import HandlerLine2D
 
 
 def wykres(time_list, data_list):
@@ -15,8 +16,6 @@ def wykres(time_list, data_list):
         yy.append(300)
     plt.style.use('seaborn')
     fig, ax = plt.subplots()
-    ax.scatter(x, time_list, s=75, c='red')
-    ax.plot(x, time_list, linewidth=3)
     ax.plot(x, y, linewidth=3, c='red')
     ax.plot(x, yy, linewidth=3, c='green')
     # mozna dodac daty od do co sie same imporuja
@@ -26,4 +25,6 @@ def wykres(time_list, data_list):
     ax.tick_params(axis='both', labelsize=20)
     plt.xticks(rotation=45)
 
+    line1, = plt.plot(x, time_list, marker='o', label='Czas nauki w [m]')
+    plt.legend(handler_map={line1: HandlerLine2D(numpoints=4)})
     plt.show()
