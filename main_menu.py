@@ -188,10 +188,3 @@ class Python_time_menu_choice_3(Menu):
         else:
             print('cos poszło nie tak z Main_Menu')
             self.choices()
-
-# rozdzielic na pare plikow menu bo robi sie za gesto
-# mozna dodac linie celu w wykresie aby bylo wiadomo
-# jak jestem blisko lub daleko celu
-# rozbudowac sam wykres
-# wykres wg dat ?
-# jak ogarne wszystko powzyej biore sie za niemiecki a potem za slodkie napoje
