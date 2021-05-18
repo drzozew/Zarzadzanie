@@ -1,5 +1,5 @@
 import os
-from Python_time_choises import Python_time_choises as PTC
+from python_time.python_time_choises import Python_time_choises as PTC
 
 
 class Menu():
@@ -15,10 +15,10 @@ class Menu():
                 return choice
             else:
                 print(error_msg)
-                return self.is_number(error_msg, msg, options_len)
+                return self.is_number(options_len)
         except ValueError:
             print(error_msg)
-            return self.is_number(error_msg, msg, options_len)
+            return self.is_number(options_len)
 
     def clean(self): return os.system('clear')
 

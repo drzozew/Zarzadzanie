@@ -1,0 +1,25 @@
+
+# jak ogarne wszystko powzyej biore sie za niemiecki a potem za slodkie napoje
+
+
+W pliku maun_menu musze zawrzec całe menu, nie wiem jak obejsc wracanie do glownego menu
+Musze zbudowac ogolna klase dla tworzenia bazy danych, w przyszlosci bedzie mozna ja wykorzystac,
+czyli musze przebudowac skrypt DB_funkcje
+
+Opcje wykresu:
+* napewno musi byc podstawowa klasa, aby moc uzyc wykres wielokrotnie
+* wyswietlenie wykresu wg daty
+* wykres srednia tygodniowa, srednia msc
+* 
+
+
+
+-
+- ogarnac zmienne lokalne z env YT
+
+
+Baza danych
+* dodac uniklana wartosc dla daty
+* sprawdzanie czy wprowadzona data miesci sie w aktualnym miesiacu, jakies info czy aby napewno dodac
+
+

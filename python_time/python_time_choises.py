@@ -1,7 +1,7 @@
-from DB_funckje import DB_Python_czas as DB
-from add_data_time import *
-from data_operation import *
-from charts_options import wykres
+from lib.db_functions import DB_Python_czas as DB
+from lib.add_data_time import *
+from python_time.python_data_operation import *
+from lib.charts_options import wykres
 
 
 class Python_time_choises():
@@ -51,7 +51,8 @@ class Python_time_choises():
 
     def choice_3_1(self):
         DB_fun = self.db
-        time_list = DB_fun.selec_data()
+        data = DB_fun.selec_data()
+        time_list = [line for line in data[1::2]]
         money_per_hour = 0.2
         time_value = money_for_time(time_list, money_per_hour)
         if time_value == 0:
@@ -63,7 +64,8 @@ class Python_time_choises():
 
     def choice_3_2(self):
         DB_fun = self.db
-        time_list = DB_fun.selec_data()
+        data = DB_fun.selec_data()
+        time_list = [line for line in data[1::2]]
         money_per_hour = 0.2
         time_value = money_for_time(time_list, money_per_hour)
         cash_out_list = DB_fun.selec_cash()
