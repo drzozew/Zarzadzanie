@@ -1,7 +1,7 @@
 from lib.db_functions import DB_Niemiecki as DB
 from lib.add_data_time import *
 from python_time.python_data_operation import *
-from lib.charts_options import wykres
+from lib.charts_options import wykres2
 
 
 class German_time_choises():
@@ -47,13 +47,13 @@ class German_time_choises():
         data_list = [line for line in data[0::2]]
         time_list = [line for line in data[1::2]]
         lista_czasu = time_in_mins_list(time_list)
-        wykres(lista_czasu, data_list)
+        wykres2(lista_czasu, data_list)
 
     def choice_3_1(self):
         DB_fun = self.db
         data = DB_fun.selec_data()
         time_list = [line for line in data[1::2]]
-        money_per_hour = 0.2
+        money_per_hour = 2
         time_value = money_for_time(time_list, money_per_hour)
         if time_value == 0:
             pass
