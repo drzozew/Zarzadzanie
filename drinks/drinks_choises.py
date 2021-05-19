@@ -59,12 +59,13 @@ class Drinks_choises():
             money_per_yes = 10
             money_per_no = 0.85
             cash = ((no*money_per_no)-(yes*money_per_yes))
+            print(f"Łącznie za naukę przysługuje {round(cash, 2)} zł.")
         except AttributeError:
             pass
         if cash == 0:
             pass
         else:
-            print(f"Łącznie za naukę przysługuje {cash} zł.")
+            pass
         self.seperator()
 
     def choice_3_2(self):

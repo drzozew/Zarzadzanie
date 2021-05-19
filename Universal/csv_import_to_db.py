@@ -7,7 +7,7 @@ cursor = connection.cursor()
 with open('czasy.csv', 'r', newline='', encoding='utf-8') as file:
     no_records = 0
     for row in file:
-        cursor.execute("INSERT INTO SqliteDb_German_Time VALUES (?,?)", row.split(","))
+        cursor.execute("INSERT INTO SqliteDb_Drinks VALUES (?,?,?)", row.split(","))
         connection.commit()
         no_records += 1
 connection.close()
