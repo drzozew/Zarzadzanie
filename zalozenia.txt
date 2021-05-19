@@ -1,8 +1,4 @@
 
-# jak ogarne wszystko powzyej biore sie za  slodkie napoje
-
-
-
 
 Opcje wykresu:
 * napewno musi byc podstawowa klasa, aby moc uzyc wykres wielokrotnie
