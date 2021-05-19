@@ -30,3 +30,21 @@ def add_cash():
     except ValueError:
         print("Wprowadzona wartość musi być liczbą.")
         return add_cash()
+
+
+def add_tak_nie():
+    data_enter = input("Czy kupiłem słodki napój ?: ")
+    if data_enter == 'tak' or data_enter == 'nie':
+        return data_enter
+    else:
+        print('Wprowadzona wartość musi być "tak" lub "nie"/n/n')
+        return add_tak_nie()
+
+
+def add_tak_nie2():
+    data_enter = input("Czy dostałem słodki napój ?: ")
+    if data_enter == 'tak' or data_enter == 'nie':
+        return data_enter
+    else:
+        print('Wprowadzona wartość musi być "tak" lub "nie"/n/n')
+        return add_tak_nie2()
