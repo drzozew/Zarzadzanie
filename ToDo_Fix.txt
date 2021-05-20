@@ -1,0 +1,11 @@
+ToDO:
+* charts options
+	* 7day avare
+	* class for basic chart
+	* print charts in filtred data time
+ToFix:
+* erorro while no data in database
+* errors in strings example: "GŁówna" not "Glowna"
+* names for classes
+
+
