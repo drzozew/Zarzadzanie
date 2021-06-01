@@ -1,4 +1,4 @@
-srodo_env
+env
 __pycache__/
 .vscode
 SQLite_Python.db

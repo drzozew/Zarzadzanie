@@ -17,3 +17,6 @@ ToFix:
 * names for classes
 
 
+add adding time from terminal, add deflaut data from yesterday
+
+
