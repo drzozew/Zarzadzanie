@@ -5,18 +5,11 @@ ToDO:
 	* print charts in filtred data time
 	
 * adding data:
-	from terminal something like that "python emult.py addp y 00:00:00"
 	'y' is for yesterday and return data from yesterday
 	't' if for today and return data for today
-	'addp' for Python time
-	'addg' for german time
-	'addd' for drinks
+	
 ToFix:
 * erorro while no data in database
 * errors in strings example: "GŁówna" not "Glowna"
 * names for classes
-
-
-add adding time from terminal, add deflaut data from yesterday
-
 

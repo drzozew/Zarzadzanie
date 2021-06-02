@@ -55,9 +55,9 @@ if len(argv) > 1 and argv[1] == '-d':
     add_data.add_data(yesterday, argv[2], argv[3])
     exit()
 
-if len(argv) > 1:
-    help = input("Nothing happend, for help input help or h: \n").strip()
-    if help == 'help' or help == 'h':
-        print("help")
-    else:
-        pass
+if argv[1] == 'help':
+    print("* 'python_chart' odpala wykres czasy pythona")
+    print("* 'python' odpala dodawanie czasu nauki dla pythona")
+    print("* -p 00:00:00 lub -p0 jeżeli wczoraj nci nie było dla pythona")
+    print("* -p 00:00:00 lub -d0 jeżeli wczoraj nic nie było dla niemieckiego")
+    print("* -d nie nie doda z wczoraj dla dink")
